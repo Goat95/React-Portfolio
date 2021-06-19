@@ -2,7 +2,7 @@ import React from 'react';
 import SectionTitle from './SectionTitle';
 import PText from './PText';
 import Button from './Button';
-import AboutImg from '../assets/images/about-sec-img.png';
+import AboutImg from '../assets/images/me1.jpg';
 import styled from 'styled-components';
 
 const AboutSectionStyle = styled.div`
@@ -86,7 +86,7 @@ export default function AboutSection() {
             가상회의를 통해 의견이 합쳐 지면서 좋은 결과물을 만들어 혁신원장상을 받은 경험이 있습니다.
           </PText>
           <div className="aboutSectionButtons">
-            <Button btnLink="/website" btnText="Works" />
+            <Button btnLink="/projects" btnText="Works" />
             <Button btnLink="/about" btnText="Read More" outline />
           </div>
         </div>

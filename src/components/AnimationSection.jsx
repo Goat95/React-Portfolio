@@ -4,17 +4,18 @@ import SectionTitle from './SectionTitle';
 import PText from './PText';
 import styled from 'styled-components';
 import { MdArrowBack, MdArrowForward } from 'react-icons/md';
-import testimonials from '../assets/data/testimonials';
+import animations from '../assets/data/animations';
+import Iframe from 'react-iframe';
 
-const TestimonialSectionStyles = styled.div`
+const AnimationSectionStyles = styled.div`
   padding: 10rem 0;
   text-align: center;
-  .testimonialWrapper {
+  .animationWrapper {
     position: relative;
     max-width: 700px;
     margin: 0 auto;
   }
-  .testimonialInfo {
+  .animationInfo {
     width: 100%;
     height: fit-content;
     padding: 3rem;
@@ -22,19 +23,20 @@ const TestimonialSectionStyles = styled.div`
     border-radius: 12px;
     margin-top: 5rem;
   }
-  .testimonialDesc {
+  .animationDesc {
+    margin-bottom: 2rem;
     .para {
       text-align: center;
     }
   }
-  .testimonialName {
-    margin-top: 4rem;
+  .animationName {
+    margin-bottom: 2rem;
     font-family: 'Montserrat Bold';
     font-size: 2.2rem;
   }
-  .testimonialTitle {
-    font-size: 1.6rem;
-    margin-top: 0.3rem;
+  .iframe {
+    width: 100%;
+    height: 300px;
   }
   .arrows {
     margin-top: 2rem;
@@ -77,41 +79,41 @@ const TestimonialSectionStyles = styled.div`
   }
 `;
 
-export default function TestimonialsSection() {
+export default function AnimationSection() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const activeSlide = testimonials[activeIndex];
+  const activeSlide = animations[activeIndex];
 
   function handlePrev() {
     if (activeIndex <= 0) {
-      setActiveIndex(testimonials.length - 1);
+      setActiveIndex(animations.length - 1);
     } else {
       setActiveIndex((oldIndex) => oldIndex - 1);
     }
   }
   function handleNext() {
-    if (activeIndex >= testimonials.length - 1) {
+    if (activeIndex >= animations.length - 1) {
       setActiveIndex(0);
     } else {
       setActiveIndex((oldIndex) => oldIndex + 1);
     }
   }
   return (
-    <TestimonialSectionStyles>
+    <AnimationSectionStyles>
       <div className="container">
-        <SectionTitle heading="Testimonials" subheading="See what out clients say about us"/>
-        <div className="testimonialWrapper">
+        <SectionTitle heading="Animation" subheading="Various Animation Effect"/>
+        <div className="animationWrapper">
           <SwitchTransition>
             <CSSTransition
               key={activeSlide.id}
               timeout={300}
               classNames="fade"
             >
-              <div className="testimonialInfo">
-                <div className="testimonialDesc">
+              <div className="animationInfo">
+                <h2 className="animationName">{activeSlide.name}</h2>
+                <div className="animationDesc">
                   <PText>{activeSlide.desc}</PText>
                 </div>
-                <h2 className="testimonialName">{activeSlide.name}</h2>
-                <p className="testimonialTitle">{activeSlide.title}, <br />{activeSlide.org}</p>
+                <Iframe className="iframe" scrolling="no" src={activeSlide.src} frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></Iframe>
               </div>
             </CSSTransition>
           </SwitchTransition>
@@ -135,6 +137,6 @@ export default function TestimonialsSection() {
           </div>
         </div>
       </div>
-    </TestimonialSectionStyles>
+    </AnimationSectionStyles>
   )
 }

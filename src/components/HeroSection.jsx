@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import HeroImg from '../assets/images/hero.png';
 import Button from './Button';
 import PText from './PText';
@@ -21,6 +21,7 @@ const HeroStyles = styled.div`
     font-size: 2rem;
     margin-bottom: -4rem;
     position: relative;
+    z-index: 10;
     span {
       display: inline-block;
       width: 100%;
@@ -153,7 +154,7 @@ export default function HeroSection() {
             <span className="heroName">Jun Hyeok</span>
           </h1>
           <div className="heroImg">
-            <img src={HeroImg} alt="hero" />
+            <img src={HeroImg} alt="hero"/>
           </div>
           <div className="heroInfo">
             <PText>
@@ -161,7 +162,7 @@ export default function HeroSection() {
               빠르게 변화하는 업무 특성에 맞게 모르는 것에 호기심을 갖고, 
               찾아가며 계속해서 발전하는 프론트 엔드 개발자가 되도록 노력하겠습니다.
             </PText> 
-            <Button btnLink="/website" btnText="see my works" />
+            <Button btnLink="/projects" btnText="see my works" />
           </div>
           <div className="heroSocial">
             <div className="heroSocialIndicator">

@@ -3,11 +3,11 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import NavMenu from './components/NavMenu';
 import Home from './pages/Home';
 import About from './pages/About';
-import Website from './pages/Website';
 import Animation from './pages/Animation';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import SmoothScrollbar from './components/SmoothScrollbar';
+import Projects from './pages/Projects';
 
 export default function App() {
   return (
@@ -22,8 +22,8 @@ export default function App() {
             <Route path="/about">
               <About />
             </Route>
-            <Route path="/website">
-              <Website />
+            <Route path="/projects">
+              <Projects />
             </Route>
             <Route path="/animation">
               <Animation />

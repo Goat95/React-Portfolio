@@ -137,12 +137,12 @@ export default function NavMenu() {
           </li>
           <li>
             <NavLink 
-              to="/website"
+              to="/projects"
               onClick={() => setShowNav(!showNav)}
               role="button"
               onKeyDown={() => setShowNav(!showNav)}
               tabIndex={0}>
-              Website
+              Projects
             </NavLink>
           </li>
           <li>

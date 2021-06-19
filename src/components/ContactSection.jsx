@@ -58,7 +58,7 @@ export default function ContactSection() {
           <div className="left">
             <ContactInfoItem 
               icon={ <MdLocalPhone /> }
-              text="+8803242"
+              text="010-2887-8816"
             />
             <ContactInfoItem 
               icon={ <MdEmail /> }

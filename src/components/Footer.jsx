@@ -78,8 +78,13 @@ export default function Footer() {
                 type: "Link"
               },
               {
-                title: "Website",
-                path: "/website",
+                title: "Projects",
+                path: "/projects",
+                type: "Link"
+              },
+              {
+                title: "Animation",
+                path: "/animation",
                 type: "Link"
               },
               {
@@ -96,7 +101,7 @@ export default function Footer() {
             links={
               [
                 {
-                  title: "+880123",
+                  title: "010-2887-8816",
                   path: "tel:+880123"
                 },
                 {
@@ -104,7 +109,7 @@ export default function Footer() {
                   path: "mailto:goat95@naver.com"
                 },
                 {
-                  title: "GEC Circle, Chittagong, Bangladesh",
+                  title: "서울 은평구 연서로21길",
                   path: "http://google.com/maps"
                 }
               ]

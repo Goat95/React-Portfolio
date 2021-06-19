@@ -11,7 +11,7 @@ export default function SmoothScrollbar({children}) {
     scrollbar.setPosition(0, 0);
   }, [pathname]);
   return (
-    <ScrollBar ref={ref} damping=".09">
+    <ScrollBar ref={ref} damping={.09}>
       {children}
     </ScrollBar>
   )

@@ -5,14 +5,16 @@ import AboutImg from '../assets/images/me1.jpg';
 import styled from 'styled-components';
 import AboutInfoItem from '../components/AboutInfoItem';
 import ContactBanner from '../components/ContactBanner';
+import SectionTitle from '../components/SectionTitle';
 
 const AboutPageStyles = styled.div`
-  padding: 20rem 0 10rem 0;
+  padding: 10rem 0;
   .topSection {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2rem;
+    margin-top: 5rem;
   }
   .left {
     flex: 3;
@@ -76,6 +78,7 @@ export default function About() {
   return (
     <AboutPageStyles>
       <div className="container">
+        <SectionTitle heading="About" subheading="Let me introduce myself" />
         <div className="topSection">
           <div className="left">
             <p className="aboutSubHeading">
@@ -91,7 +94,7 @@ export default function About() {
               저는 소프트웨어 학과에서 팀 프로젝트 경험을 하면서 누구나 알기 쉽게 코드를 명확하고 깔끔하게 짜야 한다는 것을 배웠고, 팬데믹이 겹치면서 팀 프로젝트에서 서로에 의견을 하나로 합치는 것이 힘들었는데 가상회의를 통해 의견이 합쳐 지면서 좋은 결과물을 만들어 혁신원장상을 받은 경험이 있습니다.
               </PText>
             </div>
-            <Button btnText="Download CV" btnLink="#" />
+            <Button btnText="works" btnLink="/website" />
           </div>
           <div className="right">
             <img src={AboutImg} alt="my img" />
@@ -103,15 +106,11 @@ export default function About() {
               Education
             </h1>
             <AboutInfoItem 
-              title="School"
+              title="High School"
               items={["서울 용산구 오산고등학교"]}
             />
             <AboutInfoItem 
-              title="College"
-              items={["강원도 강릉시 가톨릭관동대학교"]}
-            />
-            <AboutInfoItem 
-              title="Varsity"
+              title="University"
               items={["강원도 강릉시 가톨릭관동대학교"]}
             />
           </div>
@@ -121,15 +120,7 @@ export default function About() {
             </h1>
             <AboutInfoItem 
               title="FrontEnd"
-              items={['HTML', 'CSS', 'JS', 'REACT']}
-            />
-            <AboutInfoItem 
-              title="BackEnd"
-              items={['Node', 'Express', 'PHP']}
-            />
-            <AboutInfoItem 
-              title="Design"
-              items={['After Effects', 'Figma']}
+              items={['HTML 90%', 'CSS 90%', 'JS 70%', 'REACT 60%']}
             />
           </div>
           <div className="aboutInfoItem">
@@ -142,11 +133,11 @@ export default function About() {
             />
             <AboutInfoItem 
               title="2020"
-              items={['팀 프로젝트로 혁신원장상 수상']}
+              items={['대학교 팀 프로젝트 혁신원장상 수상']}
             />
             <AboutInfoItem 
               title="2021-"
-              items={['신입 프론트 엔드 개발자 취업']}
+              items={['신입 개발자 취업']}
             />
           </div>
         </div>

@@ -12,6 +12,7 @@ const ProjectItemStyles = styled.div`
     display: inline-block;
     border: 3px solid var(--gray-2);
     img {
+      object-position: top center;
       height: 100%;
     }
   }
@@ -39,13 +40,14 @@ const ProjectItemStyles = styled.div`
 export default function ProjectItem({
   img = projectImg,
   title = 'Project Name',
-  desc = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt laborum dolores, cum pariatur numquam fugiat eligendi laudantium? Velit quam reprehenderit vero illum omnis voluptas. Unde sapiente recusandae quisquam dolorem modi!' 
+  desc = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt laborum dolores, cum pariatur numquam fugiat eligendi laudantium? Velit quam reprehenderit vero illum omnis voluptas. Unde sapiente recusandae quisquam dolorem modi!',
+  src = 'http://goat95.dothome.co.kr/assets/script/parallax.html' 
 }) {
   return (
     <ProjectItemStyles>
-      <Link to="/website" className="projectItemImg">
+      <a href={src} target="_blank" rel="noreferrer"  className="projectItemImg">
         <img src={img} alt="project img" />
-      </Link>
+      </a>
       <div className="projectItemInfo">
         <Link to="#">
           <h3 className="projectItemTitle">{title}</h3>
