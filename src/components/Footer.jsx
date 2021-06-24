@@ -2,6 +2,7 @@ import React from 'react';
 import FooterCol from './FooterCol';
 import PText from './PText';
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
 
 const FooterStyles = styled.div`
   padding-top: 10rem;
@@ -64,77 +65,83 @@ export default function Footer() {
             찾아가며 계속해서 발전하는 프론트 엔드 개발자가 되도록 노력하겠습니다.
           </PText>
         </div>
-        <div className="footerCol2">
-          <FooterCol heading="Important Links"
-            links={[
-              {
-                title: "Home",
-                path: "/",
-                type: "Link"
-              },
-              {
-                title: "About",
-                path: "/about",
-                type: "Link"
-              },
-              {
-                title: "Projects",
-                path: "/projects",
-                type: "Link"
-              },
-              {
-                title: "Animation",
-                path: "/animation",
-                type: "Link"
-              },
-              {
-                title: "Contact",
-                path: "/contact",
-                type: "Link"
-              },
-            ]}
-          />
-        </div>
-        <div className="footerCol3">
-          <FooterCol
-            heading="Contact Info"
-            links={
-              [
+        <Fade right>
+          <div className="footerCol2">
+            <FooterCol heading="Important Links"
+              links={[
                 {
-                  title: "010-2887-8816",
-                  path: "tel:+880123"
+                  title: "Home",
+                  path: "/",
+                  type: "Link"
                 },
                 {
-                  title: "goat95@naver.com",
-                  path: "mailto:goat95@naver.com"
+                  title: "About",
+                  path: "/about",
+                  type: "Link"
                 },
                 {
-                  title: "서울 은평구 연서로21길",
-                  path: "http://google.com/maps"
-                }
-              ]
-            }
-          />
-        </div>
-        <div className="footerCol4">
-          <FooterCol 
-            heading="Social Links"
-            links={[
-              {
-                title: "Facebook",
-                path: "http://facebook.com"
-              },
-              {
-                title: "Instagram",
-                path: "http://instagram.com"
-              },
-              {
-                title: "Twitter",
-                path: "http://twitter.com"
-              },
-            ]}
-          />
-        </div>
+                  title: "Projects",
+                  path: "/projects",
+                  type: "Link"
+                },
+                {
+                  title: "Animation",
+                  path: "/animation",
+                  type: "Link"
+                },
+                {
+                  title: "Contact",
+                  path: "/contact",
+                  type: "Link"
+                },
+              ]}
+            />
+          </div>
+        </Fade>
+        <Fade right>
+          <div className="footerCol3">
+            <FooterCol
+              heading="Contact Info"
+              links={
+                [
+                  {
+                    title: "010-2887-8816",
+                    path: "tel:+880123"
+                  },
+                  {
+                    title: "goat95@naver.com",
+                    path: "mailto:goat95@naver.com"
+                  },
+                  {
+                    title: "서울 은평구 연서로21길",
+                    path: "http://google.com/maps"
+                  }
+                ]
+              }
+            />
+          </div>
+        </Fade>
+        <Fade right>
+          <div className="footerCol4">
+            <FooterCol 
+              heading="Social Links"
+              links={[
+                {
+                  title: "Facebook",
+                  path: "http://facebook.com"
+                },
+                {
+                  title: "Instagram",
+                  path: "http://instagram.com"
+                },
+                {
+                  title: "Twitter",
+                  path: "http://twitter.com"
+                },
+              ]}
+            />
+          </div>
+        </Fade>
       </div>
       <div className="copyright">
         <div className="container">

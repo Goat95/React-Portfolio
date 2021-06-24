@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
 
 const ButtonStyle = styled.div`
   margin-top: 2rem;
@@ -26,8 +27,10 @@ export default function Button({
   outline = false 
 }) {
   return (
-    <ButtonStyle outline={outline} className="buttonWrapper">
-      <a href={btnLink} target="_blank" rel="noreferrer" className="button">{btnText}</a>
-    </ButtonStyle>
+    <Fade bottom cascade>
+      <ButtonStyle outline={outline} className="buttonWrapper">
+        <a href={btnLink} rel="noreferrer" className="button">{btnText}</a>
+      </ButtonStyle>
+    </Fade>
   )
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Zoom from 'react-reveal/Zoom';
 
 const SectionTitleStyle = styled.div`
   text-align: center;
@@ -29,8 +30,10 @@ export default function SectionTitle({
 }) {
   return (
     <SectionTitleStyle className="sectionTitle">
-      <p>{subheading}</p>
-      <h2>{heading}</h2>
+        <Zoom cascade> 
+          <p>{subheading}</p>
+          <h2>{heading}</h2>
+        </Zoom>
     </SectionTitleStyle>
   )
 }

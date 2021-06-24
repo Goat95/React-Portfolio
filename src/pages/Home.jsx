@@ -6,6 +6,7 @@ import ContactBanner from '../components/ContactBanner';
 import AnimationSection from '../components/AnimationSection';
 
 export default function Home() {
+  
   return (
     <div>
       <HeroSection />

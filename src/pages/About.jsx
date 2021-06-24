@@ -6,6 +6,8 @@ import styled from 'styled-components';
 import AboutInfoItem from '../components/AboutInfoItem';
 import ContactBanner from '../components/ContactBanner';
 import SectionTitle from '../components/SectionTitle';
+import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
 
 const AboutPageStyles = styled.div`
   padding: 10rem 0;
@@ -81,12 +83,16 @@ export default function About() {
         <SectionTitle heading="About" subheading="Let me introduce myself" />
         <div className="topSection">
           <div className="left">
-            <p className="aboutSubHeading">
-              Hi, I am <span>Jun Hyeok</span>
-            </p>
-            <h2 className="aboutHeading">
-              A Front-End Developer
-            </h2>
+            <Zoom cascade> 
+              <p className="aboutSubHeading">
+                Hi, I am <span>Jun Hyeok</span>
+              </p>
+            </Zoom>
+            <Zoom cascade>
+              <h2 className="aboutHeading">
+                A Front-End Developer
+              </h2>
+            </Zoom>
             <div className="aboutInfo">
               <PText>
               안녕하세요. 프론트 엔드 개발자가 되고 싶은 김준혁입니다. 빠르게 변화하는 업무 특성에 맞게 모르는 것에 호기심을 갖고, 찾아가며 계속해서 발전하는 프론트 엔드 개발자가 되도록 노력하겠습니다.
@@ -94,11 +100,13 @@ export default function About() {
               저는 소프트웨어 학과에서 팀 프로젝트 경험을 하면서 누구나 알기 쉽게 코드를 명확하고 깔끔하게 짜야 한다는 것을 배웠고, 팬데믹이 겹치면서 팀 프로젝트에서 서로에 의견을 하나로 합치는 것이 힘들었는데 가상회의를 통해 의견이 합쳐 지면서 좋은 결과물을 만들어 혁신원장상을 받은 경험이 있습니다.
               </PText>
             </div>
-            <Button btnText="works" btnLink="/website" />
+            <Button btnText="works" btnLink="/projects" />
           </div>
-          <div className="right">
-            <img src={AboutImg} alt="my img" />
-          </div>
+          <Fade right> 
+            <div className="right">
+              <img src={AboutImg} alt="my img" />
+            </div>
+          </Fade>
         </div>
         <div className="aboutInfoItems">
           <div className="aboutInfoItem">

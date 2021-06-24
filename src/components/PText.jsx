@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
 
 const PStyle = styled.div`
   max-width: 500px;
@@ -13,8 +14,10 @@ const PStyle = styled.div`
 
 export default function PText({ children }) {
   return (
-    <PStyle className="para">
-      <p>{children}</p>
-    </PStyle>
+    <Fade bottom cascade>
+      <PStyle className="para">
+        <p>{children}</p>
+      </PStyle>
+    </Fade>
   )
 }

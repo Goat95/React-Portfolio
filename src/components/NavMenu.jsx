@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { MdMenu, MdClose } from 'react-icons/md';
+import Fade from 'react-reveal/Fade';
 
 const NavMenuStyles = styled.nav`
   position: fixed;
@@ -9,13 +10,15 @@ const NavMenuStyles = styled.nav`
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1rem 0;
+  padding: 1rem 2rem;
   background: var(--dark-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  h1 {
+    font-size: 2.5rem;
+  }
   ul {
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 90%;
-    text-align: center;
     li {
       list-style: none;
       display: inline-block;
@@ -54,7 +57,6 @@ const NavMenuStyles = styled.nav`
     display: none;
   }
   @media (max-width: 768px) {
-    padding: 0;
     .hide-item {
       transform: translateY(calc(-100% - var(--top)));
     }
@@ -103,69 +105,74 @@ export default function NavMenu() {
         >
           <MdMenu />
         </div>
-        <ul className={!showNav ? 'navItems hide-item' : 'navItems'}>
-          <div 
-            className="closeNavIcon" 
-            onClick={() => setShowNav(!showNav)}
-            role="button"
-            onKeyDown={() => setShowNav(!showNav)}
-            tabIndex={0}
-          >
-            <MdClose />
-          </div>
-          <li>
-            <NavLink 
-              to="/" 
-              exact
-              onClick={() => setShowNav(!showNav)}
-              role="button"
-              onKeyDown={() => setShowNav(!showNav)}
-              tabIndex={0}>
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink 
-              to="/about"
+        <Fade left>
+          <h1 className="logo">PORTFOLIO</h1>
+        </Fade>
+          <ul className={!showNav ? 'navItems hide-item' : 'navItems'}>
+            <div 
+              className="closeNavIcon" 
               onClick={() => setShowNav(!showNav)}
               role="button"
               onKeyDown={() => setShowNav(!showNav)}
               tabIndex={0}
-              >
-              About
-            </NavLink>
-          </li>
-          <li>
-            <NavLink 
-              to="/projects"
-              onClick={() => setShowNav(!showNav)}
-              role="button"
-              onKeyDown={() => setShowNav(!showNav)}
-              tabIndex={0}>
-              Projects
-            </NavLink>
-          </li>
-          <li>
-            <NavLink 
-              to="/animation"
-              onClick={() => setShowNav(!showNav)}
-              role="button"
-              onKeyDown={() => setShowNav(!showNav)}
-              tabIndex={0}>
-              Animation
-            </NavLink>
-          </li>
-          <li>
-            <NavLink 
-              to="/contact"
-              onClick={() => setShowNav(!showNav)}
-              role="button"
-              onKeyDown={() => setShowNav(!showNav)}
-              tabIndex={0}>
-              Contact
+            >
+              <MdClose />
+            </div>
+            <Fade right>
+              <li>
+                <NavLink 
+                  to="/" 
+                  exact
+                  onClick={() => setShowNav(!showNav)}
+                  role="button"
+                  onKeyDown={() => setShowNav(!showNav)}
+                  tabIndex={0}>
+                  Home
                 </NavLink>
-          </li>
-        </ul>
+              </li>
+              <li>
+                <NavLink 
+                  to="/about"
+                  onClick={() => setShowNav(!showNav)}
+                  role="button"
+                  onKeyDown={() => setShowNav(!showNav)}
+                  tabIndex={0}
+                  >
+                  About
+                </NavLink>
+              </li>
+              <li>
+                <NavLink 
+                  to="/projects"
+                  onClick={() => setShowNav(!showNav)}
+                  role="button"
+                  onKeyDown={() => setShowNav(!showNav)}
+                  tabIndex={0}>
+                  Projects
+                </NavLink>
+              </li>
+              <li>
+                <NavLink 
+                  to="/animation"
+                  onClick={() => setShowNav(!showNav)}
+                  role="button"
+                  onKeyDown={() => setShowNav(!showNav)}
+                  tabIndex={0}>
+                  Animation
+                </NavLink>
+              </li>
+              <li>
+                <NavLink 
+                  to="/contact"
+                  onClick={() => setShowNav(!showNav)}
+                  role="button"
+                  onKeyDown={() => setShowNav(!showNav)}
+                  tabIndex={0}>
+                  Contact
+                    </NavLink>
+              </li>
+            </Fade>
+          </ul>
       </NavMenuStyles>
     </>
   );

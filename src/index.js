@@ -4,11 +4,13 @@ import App from './App';
 import GlobalStyles from './styles/GlobalStyle';
 import Typography from './styles/Typography';
 import reportWebVitals from './reportWebVitals';
+import IntroOverlay from './components/IntroOverlay'; 
 
 ReactDOM.render(
   <>
     <GlobalStyles />
     <Typography />
+    <IntroOverlay />
     <React.StrictMode>
       <App />
     </React.StrictMode>

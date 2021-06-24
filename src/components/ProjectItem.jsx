@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import projectImg from '../assets/images/projectImg.png';
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
 
 const ProjectItemStyles = styled.div`
   .projectItemImg {
@@ -41,19 +42,21 @@ export default function ProjectItem({
   img = projectImg,
   title = 'Project Name',
   desc = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt laborum dolores, cum pariatur numquam fugiat eligendi laudantium? Velit quam reprehenderit vero illum omnis voluptas. Unde sapiente recusandae quisquam dolorem modi!',
-  src = 'http://goat95.dothome.co.kr/assets/script/parallax.html' 
+  src = '/projects' 
 }) {
   return (
-    <ProjectItemStyles>
-      <a href={src} target="_blank" rel="noreferrer"  className="projectItemImg">
-        <img src={img} alt="project img" />
-      </a>
-      <div className="projectItemInfo">
-        <Link to="#">
-          <h3 className="projectItemTitle">{title}</h3>
-        </Link>
-        <p className="projectItemDesc">{desc}</p>
-      </div>
-    </ProjectItemStyles>
+    <Fade right>
+      <ProjectItemStyles>
+        <a href={src} rel="noreferrer"  className="projectItemImg">
+          <img src={img} alt="project img" />
+        </a>
+        <div className="projectItemInfo">
+          <Link to="#">
+            <h3 className="projectItemTitle">{title}</h3>
+          </Link>
+          <p className="projectItemDesc">{desc}</p>
+        </div>
+      </ProjectItemStyles>
+    </Fade>
   )
 }

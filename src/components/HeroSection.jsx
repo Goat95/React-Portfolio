@@ -1,4 +1,6 @@
 import React from 'react';
+import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
 import HeroImg from '../assets/images/hero.png';
 import Button from './Button';
 import PText from './PText';
@@ -149,21 +151,27 @@ export default function HeroSection() {
     <HeroStyles>
       <div className="hero">
         <div className="container">
-          <h1 className="heroHeading">
-            <span>Hello This is</span>
-            <span className="heroName">Jun Hyeok</span>
-          </h1>
-          <div className="heroImg">
-            <img src={HeroImg} alt="hero"/>
-          </div>
-          <div className="heroInfo">
-            <PText>
-              안녕하세요. 프론트 엔드 개발자가 되고 싶은 김준혁입니다. 
-              빠르게 변화하는 업무 특성에 맞게 모르는 것에 호기심을 갖고, 
-              찾아가며 계속해서 발전하는 프론트 엔드 개발자가 되도록 노력하겠습니다.
-            </PText> 
-            <Button btnLink="/projects" btnText="see my works" />
-          </div>
+          <Zoom>
+            <h1 className="heroHeading">
+              <span>Hello This is</span>
+              <span className="heroName">Jun Hyeok</span>
+            </h1>
+          </Zoom>
+          <Fade bottom>
+            <div className="heroImg">
+              <img src={HeroImg} alt="hero"/>
+            </div>
+          </Fade>
+          <Zoom>
+            <div className="heroInfo">
+              <PText>
+                안녕하세요. 프론트 엔드 개발자가 되고 싶은 김준혁입니다. 
+                빠르게 변화하는 업무 특성에 맞게 모르는 것에 호기심을 갖고, 
+                찾아가며 계속해서 발전하는 프론트 엔드 개발자가 되도록 노력하겠습니다.
+              </PText> 
+              <Button btnLink="/projects" btnText="see my works" />
+            </div>
+          </Zoom>
           <div className="heroSocial">
             <div className="heroSocialIndicator">
               <p>Follow</p>

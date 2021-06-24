@@ -22,9 +22,9 @@ const ItemStyles = styled.div`
   svg {
     width: 3.5rem;
   }
-`;
+  `;
 
-export default function ContactInfoItem({
+  export default function ContactInfoItem({
   icon = <MdPlace />,
   text = "this is an info"
 }) {

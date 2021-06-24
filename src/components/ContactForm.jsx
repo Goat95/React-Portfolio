@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
 
 const FormStyles = styled.form`
   width: 100%;
@@ -44,8 +45,8 @@ export default function ContactForm() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   return (
-    <div>
-      <FormStyles>
+    <FormStyles>
+      <Fade right>
         <div className="formGroup">
           <label htmlFor="name">Your Name</label>
           <input type="text" id="name" name="name" value={name} onChange={e => setName(e.target.value)}/>
@@ -59,7 +60,7 @@ export default function ContactForm() {
           <textarea type="text" id="message" message="message" value={message} onChange={e => setMessage(e.target.value)}/>
         </div>
         <button type="submit">Send</button>
-      </FormStyles>
-    </div>
+      </Fade>
+    </FormStyles>
   )
 }

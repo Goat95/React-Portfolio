@@ -4,6 +4,7 @@ import PText from './PText';
 import Button from './Button';
 import AboutImg from '../assets/images/me1.jpg';
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
 
 const AboutSectionStyle = styled.div`
   padding: 10rem 0;
@@ -85,14 +86,18 @@ export default function AboutSection() {
             팬데믹이 겹치면서 팀 프로젝트에서 서로에 의견을 하나로 합치는 것이 힘들었는데
             가상회의를 통해 의견이 합쳐 지면서 좋은 결과물을 만들어 혁신원장상을 받은 경험이 있습니다.
           </PText>
-          <div className="aboutSectionButtons">
-            <Button btnLink="/projects" btnText="Works" />
-            <Button btnLink="/about" btnText="Read More" outline />
+          <Fade right>
+            <div className="aboutSectionButtons">
+              <Button btnLink="/projects" btnText="Works" />
+              <Button btnLink="/about" btnText="Read More" outline />
+            </div>
+          </Fade>
+        </div>
+        <Fade right>
+          <div className="aboutSectionRight">
+            <img src={AboutImg} alt="about img" />
           </div>
-        </div>
-        <div className="aboutSectionRight">
-          <img src={AboutImg} alt="about img" />
-        </div>
+        </Fade>
       </div>
     </AboutSectionStyle>
   )

@@ -2,6 +2,7 @@ import React from 'react';
 import Iframe from 'react-iframe';
 import styled from 'styled-components';
 import Button from './Button';
+import Fade from 'react-reveal/Fade';
 
 const AnimationItemStyles = styled.div`
   display: flex;
@@ -28,6 +29,22 @@ const AnimationItemStyles = styled.div`
     font-family: 'RobotoMono Reqular';
     margin-top: 2rem;
   }
+  @media (max-width: 768px) {
+    display: block;
+    .iframe {
+      width: 100%;
+    }
+    .animationItemInfo {
+      width: 100%;
+      margin-top: 2rem;
+      margin-left: 0;
+    }
+  }
+  @media (max-width: 465px) {
+    .iframe {
+      height: 300px;
+    } 
+  }
 `;
 
 export default function AnimationItem({
@@ -40,8 +57,10 @@ export default function AnimationItem({
     <AnimationItemStyles>
       <Iframe className="iframe" scrolling="no" src={src} frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></Iframe>
       <div className="animationItemInfo">
-        <h3 className="animationItemTitle">{title}</h3>
-        <p className="animationItemDesc">{desc}</p>
+        <Fade right>
+          <h3 className="animationItemTitle">{title}</h3>
+          <p className="animationItemDesc">{desc}</p>
+        </Fade>
         <Button btnText="Code View" btnLink={href} />
       </div>
     </AnimationItemStyles>

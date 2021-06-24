@@ -9,7 +9,7 @@ const AnimationStyles = styled.div`
 `;
 
 export default function Animation() {
-  const [animationData, setAnimationData] = useState(AnimationInfo);
+  const [animationData] = useState(AnimationInfo);
   return (
     <AnimationStyles>
       <div className="container">
