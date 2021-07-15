@@ -47,7 +47,7 @@ export default function ProjectItem({
   return (
     <Fade right>
       <ProjectItemStyles>
-        <a href={src} rel="noreferrer"  className="projectItemImg">
+        <a href={src} target="_blank" rel="noreferrer"  className="projectItemImg">
           <img src={img} alt="project img" />
         </a>
         <div className="projectItemInfo">

@@ -1,7 +1,7 @@
 import React from 'react';
 import Iframe from 'react-iframe';
 import styled from 'styled-components';
-import Button from './Button';
+import Button2 from './Button2';
 import Fade from 'react-reveal/Fade';
 
 const AnimationItemStyles = styled.div`
@@ -61,7 +61,7 @@ export default function AnimationItem({
           <h3 className="animationItemTitle">{title}</h3>
           <p className="animationItemDesc">{desc}</p>
         </Fade>
-        <Button btnText="Code View" btnLink={href} />
+        <Button2 btnText="Code View" btnLink={href}></Button2>
       </div>
     </AnimationItemStyles>
   )

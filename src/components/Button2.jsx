@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
-import { NavLink } from 'react-router-dom';
 
 const ButtonStyle = styled.div`
   margin-top: 2rem;
@@ -22,7 +21,7 @@ const ButtonStyle = styled.div`
   }
 `;
 
-export default function Button({ 
+export default function Button2({
   btnLink = 'https://codepen.io/goat95/pen/wvJNKPp', 
   btnText = 'Test', 
   outline = false 
@@ -30,12 +29,7 @@ export default function Button({
   return (
     <Fade bottom cascade>
       <ButtonStyle outline={outline} className="buttonWrapper">
-        <NavLink
-          className="button"
-          to={btnLink}
-          role="button"
-          tabIndex={0}
-        >{btnText}</NavLink>
+        <a href={btnLink} target="_blank" rel="noreferrer" className="button">{btnText}</a>
       </ButtonStyle>
     </Fade>
   )

@@ -1,7 +1,7 @@
 import React from 'react';
 import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
-import HeroImg from '../assets/images/hero.png';
+import me from '../assets/images/me.png';
 import Button from './Button';
 import PText from './PText';
 import SocialMediaArrow from '../assets/images/social-media-arrow.svg';
@@ -159,7 +159,7 @@ export default function HeroSection() {
           </Zoom>
           <Fade bottom>
             <div className="heroImg">
-              <img src={HeroImg} alt="hero"/>
+              <img src={me} alt="hero"/>
             </div>
           </Fade>
           <Zoom>
